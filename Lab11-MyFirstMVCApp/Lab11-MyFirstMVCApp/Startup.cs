@@ -26,6 +26,7 @@ namespace Lab11_MyFirstMVCApp
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseStaticFiles();
 
             app.UseRouting();
 
