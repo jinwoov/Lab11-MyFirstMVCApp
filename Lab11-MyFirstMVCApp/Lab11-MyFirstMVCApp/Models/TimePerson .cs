@@ -18,6 +18,13 @@ namespace Lab11_MyFirstMVCApp.Models
 		public string Category { get; set; }
 		public string Context { get; set; }
 
+		/// <summary>
+		/// The static method that is used to get the pathing and able to use from year and to year and use the cvs file that is in wwwroot folder. This will then read the file and instantiate timeperson to the list. From this list it will LINQ query to only grab years that user inputted.
+		/// </summary>
+		/// <param name="fromYear">From what year</param>
+		/// <param name="toYear">To what year from Controller</param>
+		/// <param name="path">Pathing from the controller</param>
+		/// <returns>List of timeperson</returns>
 		public static List<TimePerson> GetPersons(int fromYear, int toYear, string path)
 		{
 			List<TimePerson> timePeoples = new List<TimePerson>();
