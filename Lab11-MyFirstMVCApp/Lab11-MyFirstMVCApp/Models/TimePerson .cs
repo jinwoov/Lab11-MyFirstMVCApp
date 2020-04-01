@@ -18,10 +18,11 @@ namespace Lab11_MyFirstMVCApp.Models
 		public string Category { get; set; }
 		public string Context { get; set; }
 
-		public static List<TimePerson> GetPersons(int fromYear, int toYear)
+		public static List<TimePerson> GetPersons(int fromYear, int toYear, string path)
 		{
 			List<TimePerson> timePeoples = new List<TimePerson>();
-			string[] lines = File.ReadAllLines(@"personOfTheYear.csv");
+
+			string[] lines = File.ReadAllLines(path);
 
 			foreach (var line in lines)
 			{

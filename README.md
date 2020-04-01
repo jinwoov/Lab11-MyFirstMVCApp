@@ -53,12 +53,13 @@ When you enter the website enter year time frame that you want to search for and
 ![Application](./assets/front-page.jpg)
 
 #### Result Page
-![Result page](./assets/result-page.png)
+![Result page](./assets/result-paged.png)
 
 
 ---
 
 ### Change Log
+- 1.6: *Debugged deployed website and is fully operational* March 31 2020
 - 1.5: *README completed and images are added* March 31 2020
 - 1.4: *Deployed to Azure* March 31 2020
 - 1.3: *Methods and classes are completed and functional* March 31 2020
