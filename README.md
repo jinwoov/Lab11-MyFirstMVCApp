@@ -14,6 +14,7 @@ This is web application that created using C# and .Net Framework. Site is deploy
 ---
 ## Dependencies
 
+- [ASP.NET core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1)
 - [Git](https://git-scm.com/)
 - Terminal/ Command line
 - [.Net Core SDK](https://dotnet.microsoft.com/download)
