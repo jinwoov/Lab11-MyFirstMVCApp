@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\data\personOfTheYear.csv" />
+    <Content Include="personOfTheYear.csv" />
   </ItemGroup>
 
   <ItemGroup>
