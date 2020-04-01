@@ -21,7 +21,12 @@ namespace Lab11_MyFirstMVCApp.Models
 		public static List<TimePerson> GetPersons(int fromYear, int toYear)
 		{
 			List<TimePerson> timePeoples = new List<TimePerson>();
-			string[] lines = File.ReadAllLines(@"personOfTheYear.csv");
+			string path = Server.MapPath("~/Uploads/");
+			if (!Directory.Exists(path))
+			{
+				Directory.CreateDirectory(path);
+			}
+			string[] lines = File.ReadAllLines(@"~/personOfTheYear.csv");
 
 			foreach (var line in lines)
 			{
