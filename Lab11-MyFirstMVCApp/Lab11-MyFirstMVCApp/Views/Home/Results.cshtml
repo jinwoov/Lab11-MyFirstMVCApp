@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Lab11_MyFirstMVCApp.Models.TimePerson>
+
+
+<head>
+    <title>People Of The Year</title>
+    <link href="~/styles/modules.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <header>
+    <div>
+    <a href="/">Home</a>
+    </div>
+    </header>
+
+    <table>
+        <tr>
+            <td>Year</td>
+            <td>Honor</td>
+            <td>Name</td>
+            <td>Country</td>
+            <td>Birth Year</td>
+            <td>Death Year</td>
+            <td>Title</td>
+            <td>Category</td>
+            <td>Context</td>
+        </tr>
+        @foreach (var person in Model)
+         {
+            <tr>
+                <td>@person.Year</td>
+                <td>@person.Honor</td>
+                <td>@person.Name</td>
+                <td>@person.Country</td>
+                <td>@person.BirthYear</td>
+                <td>@person.DeathYear</td>
+                <td>@person.Title</td>
+                <td>@person.Category</td>
+                <td>@person.Context</td>
+            </tr>
+         }
+    </table>
+
+</body>

@@ -1,19 +1,25 @@
 ﻿<!DOCTYPE html>
 <head>
-    <title>hi</title>
-    <link href="~/styles/StyleSheet.css" rel="stylesheet" />
+    <title>People Of The Year</title>
+    <link href="~/styles/modules.css" rel="stylesheet" />
+
 </head>
 
 <body>
-    <h1>Welcome!</h1>
+    <h1>People Of The Year!</h1>
+    <h2>made by Jin</h2>
+    <img src="~/images/ManOfTheYear.jpg" />
 
     <!--we are going to do a post request to our server with the information in our form-->
     <form method="post">
-        <label name="FromYear">From what year?:</label>
-        <input type="number" name="FromYear" placeholder="From What Year?" />
-        <label name="ToYear">To what year?:</label>
-        <input type="number" name="ToYear" placeholder="To What Year?" />
-
+        <div>
+            <label name="FromYear">From what year?</label>
+            <input type="number" name="FromYear" placeholder="year" maxlength="4" required />
+        </div>
+        <div>
+            <label name="ToYear">To what year?</label>
+            <input type="number" name="ToYear" placeholder="year" maxlength="4" required />
+        </div>
         <button type="submit">Submit</button>
     </form>
 </body>
