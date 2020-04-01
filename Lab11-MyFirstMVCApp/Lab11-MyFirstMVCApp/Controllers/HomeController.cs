@@ -1,8 +1,10 @@
 ﻿using Lab11_MyFirstMVCApp.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -10,6 +12,13 @@ namespace Lab11_MyFirstMVCApp.Controllers
 {
     public class HomeController : Controller
     {
+        private IWebHostEnvironment _hostingEnvironment;
+
+        public HomeController(IWebHostEnvironment environment)
+        {
+            _hostingEnvironment = environment;
+        }
+
         [HttpGet]
         public IActionResult Index()
         {
@@ -30,7 +39,8 @@ namespace Lab11_MyFirstMVCApp.Controllers
         [HttpGet]
         public IActionResult Results(Year year)
         {
-            var people = TimePerson.GetPersons(year.FromYear, year.ToYear);
+            var path = Path.Combine(_hostingEnvironment.WebRootPath, "personOfTheYear.csv");
+            var people = TimePerson.GetPersons(year.FromYear, year.ToYear, path);
             return View(people);
         }
 
